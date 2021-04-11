@@ -25,7 +25,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 const icon = L.icon({
   iconUrl: './img/iss.png',
   iconSize: [90, 45],
-  iconAnchor: [25, 94],
+  iconAnchor: [50, 10],
   popupAnchor: [20, -86]
 });
 
@@ -59,4 +59,4 @@ function updateISS(lat, long, timestamp, speed, altitude, visibility) {
 }
 
 findISS();
-setInterval(findISS, 2000);
+setInterval(findISS, 500);
