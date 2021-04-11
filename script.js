@@ -42,7 +42,6 @@ function findISS() {
     const altitude = data.altitude.toFixed(2);
     const visibility = data.visibility;
 
-    // call updateISS() function to update things
     updateISS(lat, long, timestamp, speed, altitude, visibility);
   })
   .catch(e => console.log(e));
@@ -54,7 +53,7 @@ function updateISS(lat, long, timestamp, speed, altitude, visibility) {
   latitudeText.innerText = lat;
   longitudeText.innerText = long;
   timeText.innerText = timestamp;
-  speedText.innerText = `${speed} km/hr`;
+  speedText.innerText = `${speed} kmph`;
   altitudeText.innerText = `${altitude} km`;
   visibilityText.innerText = visibility;
 }
